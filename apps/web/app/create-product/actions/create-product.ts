@@ -3,7 +3,7 @@
 import { revalidateTag } from 'next/cache';
 
 export default async function createProduct(data: FormData) {
-  const res = await fetch(`${process.env.API_URL}/products`, {
+  await fetch(`${process.env.API_URL}/products`, {
     method: 'POST',
     body: JSON.stringify(Object.fromEntries(data)),
     headers: {

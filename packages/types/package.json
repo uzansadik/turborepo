@@ -1,0 +1,32 @@
+{
+  "name": "@repo/types",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w",
+    "lint": "eslint . --max-warnings 0"
+  },
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./dist/index.js"
+    },
+    "./product/interfaces/product.interface": {
+      "types": "./src/product/interfaces/product.interface.ts",
+      "default": "./dist/product/interfaces/product.interface.js"
+    },
+    "./product/dto/create-product.request": {
+      "types": "./src/product/dto/create-product.request.ts",
+      "default": "./dist/product/dto/create-product.request.js"
+    }
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "@types/node": "^22.15.3",
+    "@types/eslint": "^8.4.1",
+    "eslint": "^9.33.0",
+    "typescript": "5.9.2"
+  }
+}
